@@ -1,0 +1,44 @@
+<div class=" container col-md-7  ">
+
+    <body class="">
+        <h1>Edit Category</h1>
+        <form class="container" action="/admin/edit-category/{{category._id}}" method="post" enctype="multipart/form-data">
+            <label for="">Category Name:</label><br>
+            <input type="text" name="category" value="{{category.category}}"><br>
+
+            <label for="">Status:</label><br>
+            <label class="radio-inline mx-4">
+                <input type="radio"name='availableStatus' value="true"checked>Available
+                <br>
+                <input type="radio"name='availableStatus' value="false">Out of Stock
+            </label><br>
+
+            <label for="">Description:</label><br>
+            <input type="text" name="description"value="{{category.description}}"><br>
+
+            <label for="">Meta Key:</label><br>
+            <input type="text" name="metakey"value="{{category.metakey}}"> <br>
+
+            <label for="">Trending Status:</label><br>
+            <label class="radio-inline mx-4 ">
+                <input type="radio"name='trending' value="true">Trending
+                <br>
+                <input type="radio"name='trending' value="false">Not Trending
+            </label><br>
+
+            <label for="">Image:</label><br>
+            <img src="/category-image/{{category._id}}.jpg" alt="" id="output" style="width: 100px"><br>
+            <input type="file" name="photo" "form-controls" onchange="loadFile(event)"><br>
+
+            <button type="submit" class=" btn btn-success m-auto">Submit Edit </button>
+        </form>
+    </body>
+</div>
+
+
+<script>
+var loadFile = function(event) {
+	var image = document.getElementById('output');
+	image.src = URL.createObjectURL(event.target.files[0]);
+};
+</script>

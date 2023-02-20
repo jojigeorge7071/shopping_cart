@@ -1,0 +1,26 @@
+<section>
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-12  ">
+                <h5 class="text-center"> Category </h5>
+                <div class="row ">
+                    {{#each products}}
+                    <div class="card col-md-3 p-2 " style="width: 16rem;">
+                        <div class="my-auto">
+                            <img class="card-img-top " src={{this.image}} height='230px' alt="Card image cap">
+                            <a href="{% url 'collectionsviews' item.slug %}">
+                                <div class=" mt-3 ">
+                                    <h5 class="text-center">{{ this.name }}</h5>
+                                    <!-- <input type="text" value="{{item.slug}}"> -->
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</section>

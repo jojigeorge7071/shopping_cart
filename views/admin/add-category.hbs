@@ -1,0 +1,34 @@
+<div class="col-md-6 m-4 container">
+    <body>
+        <h1>Add Category</h1>
+        <form class="col-md-6" action="/admin/add-category" method="post" enctype="multipart/form-data">
+            <label for="">Category name:</label><br>
+            <input type="text" name="category"><br>
+
+            <label for="lname">Status:</label><br>
+            <label class="radio-inline mx-4">
+                <input type="radio"name='availableStatus' value="true"checked>Available
+                <br>
+                <input type="radio"name='availableStatus' value="false">Out of Stock
+            </label><br>
+
+            <label for="lname">Description:</label><br>
+            <input type="text" name="description"><br>
+            
+            <label for="lname">Meta keyword:</label><br>
+            <input type="text" name="metakey"><br>
+
+            <label for="lname">Trending:</label><br>
+            <label class="radio-inline mx-4 ">
+                <input type="radio"name='trending' value="true"checked>Trending
+                <br>
+                <input type="radio"name='trending' value="false">Not Trending
+            </label><br>
+
+            <label for="lname">Image:</label><br>
+            <input type="file" name="photo" "form-controls"><br>
+
+            <button type="submit" class=" btn btn-success m-auto">add </button>
+        </form>
+    </body>
+</div>

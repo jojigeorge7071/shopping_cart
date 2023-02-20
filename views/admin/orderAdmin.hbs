@@ -1,0 +1,33 @@
+<section>
+    <div class="container ">
+        
+        <table class=" table m-4">
+            <thead>
+                <tr>
+                    <th scope="col">Date</th>
+                    <th scope="col">Order Id</th>
+                    <th scope="col">Payment Method</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Status</th>
+
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            {{#each order}}
+            <tbody>
+                <tr>
+                    <th scope="row">{{this.date}}</th>
+                    <td>{{this._id}}</td>
+                    <td>{{this.paymentMethod}}</td>
+                    <td>{{this.totalPrice}}/-</td>
+                    <td>{{this.status}}</td>
+                    <td>
+                        <a class="btn btn-primary" href="/admin/viewAdminOrder/{{this._id}}">View Details</a>
+                    </td>
+                </tr>
+
+            </tbody>
+            {{/each}}
+        </table>
+    </div>
+</section>

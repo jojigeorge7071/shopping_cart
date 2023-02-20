@@ -1,0 +1,53 @@
+<body>
+    <header>
+        <nav class=" navbar navbar-expand-lg navbar-light bg-secondary">
+            <div class="container-fluid">
+                <i class="fa-solid fa-cart-shopping">
+                <a class="navbar-brand" href="/">Shopping Cart</a>
+                </i>
+                {{!-- <a class="navbar-brand" href="/admin">Shopping Cart</a> --}}
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">admin header</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/admin/orderAdmin">All Order </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/admin/add-category">Add Category</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/admin/add-product">Add Product</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                {{#if adminS}}
+                                    {{adminS.name}}
+                                {{else}}
+                                    Admin
+                                {{/if}}
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                {{#if adminS}}
+                                        <li><a class="dropdown-item" href="admin/adminLogout">Logout</a></li>
+                                {{else}}
+                                    <li><a class="dropdown-item" href="/admin/adminLogin">Admin Login</a></li>
+                                    <li><a class="dropdown-item" href="/admin/adminSignup">Admin Signup</a></li>
+                                {{/if}}
+                                
+                                
+                            </ul>
+                        </li>
+                       
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>

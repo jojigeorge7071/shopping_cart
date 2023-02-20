@@ -1,0 +1,59 @@
+<div class="col-md-6 m-4 container">
+    <body>
+        <h1>Add Product</h1>
+        <form class="col-md-6" action="/admin/add-product" method="post" enctype="multipart/form-data">
+            <label for="">Category name:</label><br>
+            <select class="form-select "name="category" id="selectValue" >
+                <option selected> select </option>
+                {{#each allCategory}}
+                <option value="{{this.category}}" >{{this.category}}</option>
+                {{/each}}
+            </select>
+            <label for="">Product name:</label><br>
+            <input type="text" name="title"><br>
+
+            <label for="">Slug:</label><br>
+            <input type="text" name="slug"><br>
+
+            <label for="">Tag:</label><br>
+            <input type="text" name="tag"><br>
+
+            <label for="">Small Description:</label><br>
+            <input type="text" name="smalldescription"><br>
+
+            <label for="">Stock:</label><br>
+            <input type="number" name="stock"><br>
+            
+            <label for="">Description:</label><br>
+            <input type="text" name="description"><br>
+            
+            <label for="">Original price:</label><br>
+            <input type="number" name="price"> <br>
+
+            <label for="">Selling price:</label><br>
+            <input type="number" name="sellprice"> <br>
+
+            <label for="">Available Status:</label><br>
+            <label class="radio-inline mx-4 ">
+                <input type="radio"name='available' value=true checked>Available
+                <br>
+                <input type="radio"name='available' value=false>Out of Stock
+            </label><br>
+
+            <label for="">Trending:</label><br>
+            <label class="radio-inline mx-4 ">
+                <input type="radio"name='trending' value="true"checked>Trending
+                <br>
+                <input type="radio"name='trending' value="false">Not Trending
+            </label><br>
+
+            <label for="">Meta keyword:</label><br>
+            <input type="text" name="metakey"><br>
+            
+            <label for="">Image:</label><br>
+            <input type="file" name="photo" "form-controls"><br>
+            
+            <button type="submit" class=" btn btn-success m-auto">add </button>
+        </form>
+    </body>
+</div>
