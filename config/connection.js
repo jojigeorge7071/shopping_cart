@@ -3,8 +3,8 @@ const state ={
     db:null
 }
 module.exports.connect =function(done){
-    // mongodb+srv://username:username@cluster101.0ktl0i6.mongodb.net/?retryWrites=true&w=majority
-    const url ='mongodb://localhost:27017'
+    const url ='mongodb+srv://username:username@cluster101.0ktl0i6.mongodb.net/?retryWrites=true&w=majority'
+   // const url ='mongodb://localhost:27017'
     const dbname = 'shopping'
 
     mongoClient.connect(url,(err,data)=>{
